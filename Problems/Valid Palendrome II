@@ -38,3 +38,5 @@ def is_palindrome(string):
     return True
 
 # Uhhh if you want to find this problem, it's everywhere just google it.
+
+print(is_palindrome("madame"))
