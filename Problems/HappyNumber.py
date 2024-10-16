@@ -60,8 +60,6 @@ def isHappyOptimal(num):
     fast_pointer_digits = breakNumberIntoDigits(num)
     fast_pointer = sumOfSquaresOfDigits(fast_pointer_digits)
 
-    if num == 1: return True
-
     while fast_pointer != 1 and fast_pointer != slow_pointer:
         
         # Perform the square sum operation once for slow pointer
