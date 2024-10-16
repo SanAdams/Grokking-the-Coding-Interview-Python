@@ -57,25 +57,28 @@ def breakNumberIntoDigits(num):
 # it means there's a cycle and the number is not happy, other wise if the fast pointer reaches 1, then the number is happy
 def isHappyOptimal(num):
     slow_pointer = num
-    fast_pointer_digits = breakNumberIntoDigits(num)
-    fast_pointer = sumOfSquaresOfDigits(fast_pointer_digits)
+    fast_pointer = squareSum(squareSum(num))
 
     while fast_pointer != 1 and fast_pointer != slow_pointer:
         
         # Perform the square sum operation once for slow pointer
-        slow_pointer_digits = breakNumberIntoDigits(slow_pointer)
-        slow_pointer = sumOfSquaresOfDigits(slow_pointer_digits)
+        slow_pointer = squareSum(slow_pointer)
 
         # Perform the square sum operation twice for fast pointer
-        fast_pointer_digits = breakNumberIntoDigits(fast_pointer)
-        fast_pointer = sumOfSquaresOfDigits()
-        
-        fast_pointer_digits = breakNumberIntoDigits(fast_pointer)
-        fast_pointer = sumOfSquaresOfDigits()
+        fast_pointer = squareSum(squareSum(fast_pointer))
 
     return fast_pointer == 1
 
-print(isHappy(0)) # Expecting False
-print(isHappy(10)) # Expecting True
-print(isHappy(28)) # Expecting True
-print(isHappy(8)) # Expecting False
+def squareSum(n):
+    sum_ = 0
+    while n != 0:
+        remainder = n % 10
+        sum_ += remainder * remainder
+        n //= 10
+    return sum_
+    
+
+print(isHappyOptimal(0)) # Expecting False
+print(isHappyOptimal(10)) # Expecting True
+print(isHappyOptimal(28)) # Expecting True
+print(isHappyOptimal(8)) # Expecting False
