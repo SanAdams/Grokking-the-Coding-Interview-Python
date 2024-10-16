@@ -1,0 +1,35 @@
+def is_palindrome(string):
+  
+  left = 0
+  right = len(string) - 1
+  there_is_mismatch:bool = False
+  
+  while left <= right:
+    if string[left] != string[right]
+    left_mismatch_index = left
+    right_mismatech_index = right
+    there_is_mismatch = True
+    
+    if there_is_mismatch:
+      # Skip the right character first
+      right += 1
+      there_is_mismatch = True
+      while(left <= right):
+        if string[left] != string[right]:
+          return False
+        left += 1
+        right += 1
+        
+      #Go back to where the mismatch happebed
+      left = left_mismatch_index
+      right = right_mismatech_index
+      
+      # Skip the left character
+      left += 1
+      while(left <= right):
+      if string[left] != string[right]:
+        return False
+          
+    right += 1
+    left += 1
+  return True
