@@ -1,4 +1,6 @@
 # So what happens if I want to use the %= operator and subtact from something afterwards. Can I do that in one line?
+
+
 def reset():
     global x
     x = 7
