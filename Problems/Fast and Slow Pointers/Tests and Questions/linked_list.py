@@ -15,6 +15,7 @@ class LinkedList:
         else:
             self.head = node
 
+    # This is mine though :)
     def insert_node_at_end(self, node):
         if self.head:
             dummy = self.head
