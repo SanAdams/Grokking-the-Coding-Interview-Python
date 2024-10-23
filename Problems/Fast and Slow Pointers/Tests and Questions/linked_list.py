@@ -1,4 +1,4 @@
-import Node
+from Node import Node
 
 # I am not the original author of this. Credit to Educative.io
 class LinkedList:
