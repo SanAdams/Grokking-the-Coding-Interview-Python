@@ -16,8 +16,9 @@ def reverse_list(list: LinkedList):
         current_node.next = previous_node
         previous_node = current_node
         current_node = next_node
-    return previous_node
+    list.head = previous_node
+    return list
         
 
 reversed_list = reverse_list(linkedlist)
-print(reversed_list.data, reversed_list.next.data, reversed_list.next.next.data, reversed_list.next.next.next.data) # Expected 7 2 3 1, Actual: 7 2 3 1
+print(linkedlist)  # Expected 7 2 3 1, Actual: 7 2 3 1
