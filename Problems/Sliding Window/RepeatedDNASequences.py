@@ -1,7 +1,8 @@
 from typing import List
 
-SEQUENCE_LENGTH = 10
-def findRepeatedDnaSequences(s: str) -> List[str]:
+
+def findRepeatedDnaSequences(s: str, k: int) -> List[str]:
+    SEQUENCE_LENGTH = k
     res = []
     sequences = {}
     right = SEQUENCE_LENGTH
@@ -26,4 +27,4 @@ def findRepeatedDnaSequences(s: str) -> List[str]:
     return res
 
 
-print(findRepeatedDnaSequences("AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT"))
+print(findRepeatedDnaSequences("AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT", 10))
