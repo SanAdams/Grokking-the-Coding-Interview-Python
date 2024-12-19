@@ -9,7 +9,6 @@ def maximum_average_subarrayI(nums, k):
             max_sum = max(max_sum, sum)
             sum -= nums[i - (k - 1)]
     
-    print(max_sum)
     return max_sum / k
 
 def main():
